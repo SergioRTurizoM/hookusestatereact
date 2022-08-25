@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Plantilla from "./components/plantilla";
+import Circulo from "./components/Circulo";
 
 function App() {
   const title = "Acerca de mi";
@@ -16,8 +17,18 @@ function App() {
     music: "Salsa",
   };
 
+
+  const [isBulbOn, setIsBulbOn] = useState(false);
+
+  const toggleIsOn =()=> setIsBulbOn(!isBulbOn)
+
+
   return (
     <>
+      <Circulo isBulbOn={isBulbOn} toggleIsOn={toggleIsOn}/>
+      <Circulo isBulbOn={isBulbOn} toggleIsOn={toggleIsOn}/>
+      <Circulo isBulbOn={isBulbOn} toggleIsOn={toggleIsOn}/>
+
       <Plantilla
         title="Sobre mí"
         item1={me.name}

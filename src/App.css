@@ -28,3 +28,11 @@ body{
   border: solid;
   margin: 10px;
 }
+
+
+.circulocolor {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  
+}

@@ -1,7 +1,11 @@
 import { useState } from "react";
 
 const Plantilla = ({ title, item1, item2, item3, color }) => {
-  const [texto, settexto] = useState("");
+  const [texto, settexto] = useState("Ver mas");
+
+    const cambiar = ()=> {
+        texto == "Ver mas" ? texto == "No hay mas" : texto == "Ver mas"
+    }
 
   return (
     <>
@@ -13,7 +17,7 @@ const Plantilla = ({ title, item1, item2, item3, color }) => {
           <li>{item3}</li>
         </ul>
         <p>{texto}</p>
-        <button onClick={() => settexto("No hay más por ahora")}>
+        <button onClick={() => settexto(frase)}>
           Más Información
         </button>
       </div>
